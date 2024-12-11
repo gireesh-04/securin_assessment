@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .tableContainer {
+    margin: 20px 0;
+  }
+  .cveTable, .cve-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .cveTable th, .cveTable td, .cve-details-table th, .cve-details-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  .cveTable th {
+    background-color: #f4f4f4;
+  }
+  .tableFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .paginationContainer button {
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+  .cve-details-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }

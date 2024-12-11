@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVE List</title>
+  <link rel="stylesheet" href="main_page_style.css">
+</head>
+<body>
+  <div class="App">
+    <h1 style="text-align:center;">CVE List</h1>
+    <h5 id="totalRecords">Total Records: 0</h5>
+    <div class="tableContainer">
+      <table class="cveTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Source Identifier</th>
+            <th>Published Date</th>
+            <th>Last Modified Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="cveTableBody">
+          <!-- Dynamic rows will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="error" style="color: red; display: none;">Failed to fetch CVEs. Please try again.</div>
+
+    <div class="tableFooter">
+      <div class="perPageContainer">
+        <label>Results per page:</label>
+        <select id="perPage" onchange="changePerPage()">
+          <option value="10">10</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+      <div class="paginationContainer">
+        <button id="prevPage" onclick="changePage(currentPage - 1)" disabled>Previous</button>
+        <span id="currentPage">Page 1</span>
+        <button id="nextPage" onclick="changePage(currentPage + 1)" disabled>Next</button>
+      </div>
+    </div>
+
+    <div id="cveDetails" class="cve-details-container" style="display: none;"></div>
+  </div>
+
+  <script src="main_page_script.js"></script>
+</body>
+</html>
